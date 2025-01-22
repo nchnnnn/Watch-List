@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.container{
+    margin: 1rem;
+    width: clamp(400px, 50%, 50rem);
+    background-color: pink;
+    height: 200px;
+    /* box-shadow: ; */
+}
