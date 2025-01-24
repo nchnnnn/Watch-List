@@ -6,27 +6,220 @@
     <title>Watch List</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animation.css">
-
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
 </head>
 <body>
     
     <main>
 
-        <div class="container">
-            <h1>Watch List</h1>
+
+        <div class="theme">
+            <div class="colorpick">
+                <span>Theme: </span>
+                <input type="color">
+                
+            </div>
+
         </div>
 
 
 
+        <div class="container">
+            
+            <div class="header">
+                
+                <div class="title">
+                    <i class="fa-regular fa-list-radio"></i><p>Watch List</p></div>
+
+                <div class="controls">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+
+            </div>
+
+           <div class="container-wrap">
+
+
+            <!-- Search Bar -->
+                <div class="search-bar-container">
+
+                    <div class="search-bar">
+                        <i title="Add" class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" placeholder="Search...">
+                    </div>
+                    
+                    <div class="search-bar-filters">
+                        <i title="Filter" class="fa-regular fa-filter" id="filter-icon"></i>
+                    </div>
+                </div>
+
+
+            
+                <div id="filters-container" class="filters-container">
+                    <div class="filters-scroll">
+                        <div class="filter">All</div>
+                        <div class="filter">Watched</div>
+                        <div class="filter">Unwatched</div>
+                        <div class="filter">Ongoing</div>
+                        <div class="filter">Complete</div>
+                    </div>
+
+                    <div class="items-container">
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info"><h6>Tomorrow</h6></div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox"  type="checkbox"></div>
+                            <div class="item-info"><h6>Squid Game</h6></div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox"  type="checkbox"></div>
+                            <div class="item-info"><h6>Reply 1988</h6></div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox"  type="checkbox"></div>
+                            <div class="item-info"><h6>Lovely Runner</h6></div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Tomorrow</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Squid Game</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Reply 1988</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Lovely Runner</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Tomorrow</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Squid Game</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Reply 1988</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Lovely Runner</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Tomorrow</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Squid Game</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Reply 1988</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Lovely Runner</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Tomorrow</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Squid Game</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Reply 1988</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="input-container"><input class="checkbox" type="checkbox"></div>
+                            <div class="item-info">
+                                <h6>Lovely Runner</h6>
+                            </div>
+                            <div class="edit-container"><i class="fa-light fa-pencil"></i><i id="button" class="fa-regular fa-trash"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+
+           </div>
+
+
+        </div>
+
     </main>
 
 
-
-
-
-
-
-    
+    <script src="style.js"></script>
     <script src="server.js"></script>   
 </body>
 </html>
