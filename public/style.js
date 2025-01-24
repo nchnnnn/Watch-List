@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     const filterIcon = document.getElementById("filter-icon")
     const filterContainer = document.getElementById("filters-container");
     const buttons = document.querySelectorAll('#button')
-    
+    const items_container = document.getElementById("items-container");
     document.querySelectorAll(".checkbox").forEach((checkbox) => {
       const itemInfo = checkbox.closest(".item").querySelector(".item-info");
       if (checkbox.checked) {
@@ -23,12 +23,16 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     filterIcon.addEventListener("click", () =>{
 
+      
+
         if(filterIcon.className == "fa-regular fa-filter"){
             filterIcon.className = "fa-solid fa-filter"
-            filterContainer.style.top = "5px";
+            filterContainer.style.paddingTop = "2.3rem";
+      
+      
         }else{
             filterIcon.className = "fa-regular fa-filter";
-            filterContainer.style.top = "-2.3rem";
+            filterContainer.style.paddingTop = "0";
 
         }
 
