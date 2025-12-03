@@ -104,12 +104,125 @@ main{
     padding: .5rem;
     border-radius: 50%;
     border: 2px solid black;
-    background-color: rgb(99, 248, 198);
+    background-color: rgb(126, 255, 195);
 
 }
 
 .header .controls i:hover{
-    background-color: rgb(216, 255, 242);
+    background-color: rgb(50, 255, 159);
+}
+
+
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+}
+
+.error-message{
+    background-color: red;
+    display: flex;
+    padding-top: .5rem;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.modal-section {
+    font-family: "Varela Round", serif;
+    position: absolute;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 1rem;
+    background-color: pink
+}
+
+.modal-footer {
+    font-family: "Varela Round", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.modal-body {
+    font-family: "Varela Round", serif;
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body .info{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+
+}
+
+.modal-body .info #add-title{
+    flex-grow: 2;
+}
+
+.modal-body .info #add-episodes{
+    flex-basis: 5rem;
+    width: 5rem;
+}
+
+.modal-body .status {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: .5rem;
+}
+
+.modal-body input {
+    font-family: "Varela Round", serif;
+    padding: .5rem;
+    /* margin: .5rem; */
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+.modal-body select {
+    font-family: "Varela Round", serif;
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+        text-align-last: center;
+        /* For modern browsers */
+    width: 100%;
+
+}
+.modal-body option{
+    text-align: center;
+        text-align-last: center;
+        /* For modern browsers */
+    font-family: "Varela Round", serif;
+}
+
+.modal-footer button {
+    font-family: "Varela Round", serif;
+    flex-grow: 1;
+    padding: .5rem;
+    margin-top: .5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(126, 255, 195);
+}
+.modal-footer button:hover,
+.modal-footer button:focus {
+    background-color: rgb(50, 255, 159);
 }
 
 /* container-wrap */
@@ -117,7 +230,6 @@ main{
 .container-wrap {
     position: relative;
     width: 100%;
-    
     height: 80%;
     justify-content: flex-start;
     display: flex;
@@ -128,6 +240,7 @@ main{
     border-top-right-radius: 0;
     border: 2px solid rgb(0, 0, 0);
     box-shadow: rgb(19, 19, 19) -6px 4px 1px;
+    overflow: hidden;
 }
 
 .container-wrap .search-bar-container {
@@ -151,8 +264,10 @@ main{
 
 .container-wrap .search-bar input{
     all: unset;
-    /* background-color: red; */
+    padding-left: .5rem;
     width: 100%;
+    font-family: "Gochi Hand", serif !important;
+    
     /* height: 100%; */
     /* border: 1px solid black; */
 }
@@ -182,7 +297,7 @@ main{
 }
 
 .container-wrap .filters-container{
-
+    
     width: 100%;
     transition: all 250ms ease-in-out;
 }   
@@ -207,8 +322,8 @@ main{
 
 .container-wrap .filters-scroll .filter:hover {
     color: white;
-    border: 1px solid white ;
-    background-color: rgb(29, 29, 29);
+    
+    background-color: #363636;
 }
 
 .container-wrap .items-container {
@@ -232,19 +347,22 @@ main{
     
 
 }
+   
 
-.container-wrap .item-info{
-    font-family: "Varela Round",
-        "Helvetica Neue",
-        "Helvetica",
-        "Arial",
-        sans-serif;
-        font-weight: 600;
-        
+
+.container-wrap .item-info input[type="text"] {
+    padding: 5px;
+    width: 90%;
+    margin-left: calc(1rem - 5px);
+    border: none;
+    font-family: "Gochi Hand", serif !important;
+    
+    font-size: 15px;
 }
 
-.container-wrap .item-info h6{
-    padding-left: 1rem;
+.container-wrap .item-info input[type="text"]:focus{
+    
+    outline: none;
 }
 
 
@@ -260,6 +378,34 @@ main{
     /* Ensures full height */
     
 }
+.container-wrap .input-container input{
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 50%;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.container-wrap .input-container input:hover {
+    appearance: none;
+    background-color: rgb(248, 209, 209);
+}
+
+.container-wrap .input-container input[type="checkbox"]:checked {
+    background-color: #faa0b1;
+    
+}
+
+.container-wrap .input-container input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: rgb(20, 20, 20);
+    font-size: 14px;
+    position: relative;
+ 
+}
 
 /* Creates a full-height border */
 .container-wrap .input-container::before {
@@ -269,15 +415,15 @@ main{
     top: 0;
     width: 2px;
     height: 100%;
-    background-color: pink;
+    background-color: #faa0b1;
     /* Border color */
 }
 
 .container-wrap .edit-container{
-    /* background-color: red; */
     display: flex;
     justify-content: space-evenly;
 }
+
 
 .container-wrap .fa-pencil:hover {
     color: rgb(247, 189, 32);
@@ -287,27 +433,23 @@ main{
     color: rgb(255, 83, 83);
 }
 
+
+.hidden{
+    display: none !important;
+}
+
 @keyframes fadeOut {
-    0% {
+    from {
         opacity: 1;
+        transform: translateX(0);
     }
 
-    25% {
-        opacity: .7;
-    }
-
-    50% {
-        opacity: .3;
-    }
-
-    100% {
+    to {
         opacity: 0;
+        transform: translateX(-10px);
     }
 }
 
-.hidden {
-    animation: fadeOut .3s forwards;
-    /* Fades out */
-    /* visibility: hidden; */
-    /* Keeps space but hides the element */
+.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
 }

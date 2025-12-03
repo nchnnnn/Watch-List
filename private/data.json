@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Lovely Runner",
+    "All": true,
+    "Watched": true,
+    "Uwatched": false,
+    "Ongoing": false,
+    "Complete": true
+  },
+  {
+    "title": "Tomorrow",
+    "All": true,
+    "Watched": true,
+    "Uwatched": false,
+    "Ongoing": false,
+    "Complete": true
+  },
+  {
+    "title": "All of Us Are Dead",
+    "All": true,
+    "Watched": true,
+    "Uwatched": false,
+    "Ongoing": true,
+    "Complete": false
+  }
+]
